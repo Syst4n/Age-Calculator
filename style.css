@@ -1,0 +1,123 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap');
+
+:root {
+    --primary-purple:hsl(259, 100%, 65%);
+    --primary-red: hsl(0, 100%, 67%);
+    --neutral-white: hsl(0, 0%, 100%);
+    --neutral-light-grey: hsl(0, 0%, 86%);
+    --neutral-smokey-grey: hsl(0, 1%, 44%);
+}
+
+
+body {
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+}
+.div-width0{
+   width: 180px;
+   margin-top: 100px;
+   padding-bottom: 30px;
+}
+/* input {
+    padding: 0.2em; 
+    box-sizing: border-box;
+    width: 100% 
+  }  */
+
+
+input {
+    /* outline-width: 0; */
+    caret-color: var(--primary-purple);
+    border-width: 1px;
+    border-radius: 5px;
+    height: 65px;
+    width: 9rem;
+    border-color: var(--neutral-light-grey);
+    padding: 25px;
+    border-style: solid;
+    font-size: 32px;
+    
+   
+
+}
+label {
+    color: var(--neutral-smokey-grey);
+    margin-bottom: 4px;
+   font-weight: 400;
+   font-style: italic;
+   font-size: 14px;
+}
+input:focus {
+    outline-color: hsl(259, 100%, 65%);
+
+}
+.pointer {
+    background-color: var(--primary-purple);
+
+    border-radius: 50%;
+    width: 70px;
+}
+.pointer:hover {
+    background-color: black;
+    cursor:pointer;
+}
+
+
+.pointer-div {
+
+    width: 70%;
+}
+#years, #months, #days {
+    color: var(--primary-purple);
+} 
+.cont {
+    width: 540px;
+    margin-top: 30px;
+    margin-bottom:30px;
+}
+.entries {
+ margin-top: 5%;
+}
+h1 {
+    display:inline;
+    font-size: 80px;
+
+    font-weight: 800;
+    font-style: italic;
+}
+
+@media screen and (max-width: 1400px){
+    .pointer-div {
+        width: 55%;
+        margin: 0;
+        padding: 0;
+    }
+    .div-width0{
+        width: 150px;
+        margin-top: 100px;
+        margin-bottom: 25px;
+        padding-bottom: 60px;
+     }
+     .cont{
+        width: 480px;
+     }
+     
+}
+
+
+
+.error {
+    outline-color: var(--primary-red);
+    border-color: var(--primary-red);
+}
+.error:focus{
+    outline-color: var(--primary-red);
+    border-color: var(--primary-red);
+}
+.text-error {
+    color: var(--primary-red);
+    font-weight: 400;
+    font-style: italic;
+    font-size: 14px;
+}
