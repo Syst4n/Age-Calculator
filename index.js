@@ -2,8 +2,14 @@
 var dayTriggered = false;
 var monthTriggered = false;
 var yearTriggered = false;
-$("#pointer").on("click", function(){
-    
+$("#pointer").on("click", run)
+$(document).on("keypress", run)
+
+
+
+    function run(e){
+    if (e.type=='click' || e.key =='Enter'){
+
     var dayEntered = $("#day").val(); //jQuery
     var monthEntered = document.getElementById("month").value //same way but without jQuery ;), no need for "#" here because it's get by id
     var yearEntered = document.querySelector("#year").value// same thing but using querySelector, we specify "#"
@@ -19,7 +25,6 @@ $("#pointer").on("click", function(){
 
 
     if (( dayEntered=="00" || dayEntered>31 || dayEntered=='' || monthEntered=='' || monthEntered=="00" || monthEntered>12 || yearEntered=='' || yearEntered=="00" || yearEntered>currentYear)) {
-        console.log("first if")
         $("input").addClass("error");
         $("label").addClass("text-error");
 
@@ -75,7 +80,7 @@ $("#pointer").on("click", function(){
         yearTriggered=false;
         console.log('solid')
 
-         debugger;
+        
          yearEntered = Number(yearEntered)
         monthEntered = Number(monthEntered)
          dayEntered = Number(dayEntered)
@@ -89,7 +94,7 @@ $("#pointer").on("click", function(){
 
 
 
-})
+}
 function calculateAge(year, month, day) {
     const birthDate = new Date(year, month - 1, day);
     const currentDate = new Date();
@@ -108,4 +113,4 @@ function calculateAge(year, month, day) {
     const dayAge = Math.floor(ageInMilliseconds / (1000 * 60 * 60 * 24));
   
     return [yearAge, monthAge, dayAge];
-  }
+} }
